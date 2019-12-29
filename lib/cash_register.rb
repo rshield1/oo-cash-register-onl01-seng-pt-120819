@@ -18,7 +18,7 @@ attr_accessor :items, :discount, :total, :last_transaction
     if @discount == 0
       return "There is no discount to apply."
     else
-      self.total = @total - @discount
+      self.total = @total *((100 - @discount)/100)
     end
   end
   
